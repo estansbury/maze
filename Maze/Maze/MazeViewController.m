@@ -58,6 +58,11 @@
         
         self.currentPoint  = CGPointMake(0, 144);
         
+        /////Resetting the velocity when you lose
+        self.pacmanXVelocity = 0;
+        self.pacmanYVelocity = 0;
+        /////
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                         message:@"Mission Failed!"
                                                        delegate:self
@@ -142,6 +147,8 @@
     rotate.fillMode            = kCAFillModeForwards;
     [self.pacman.layer addAnimation:rotate forKey:@"10"];
 }
+
+
 
 - (void)update {
     
