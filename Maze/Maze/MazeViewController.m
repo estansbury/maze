@@ -127,20 +127,20 @@
     
     self.pacman.frame = frame;
     
-    // Rotate the sprite
+    // Rotate the main player
     
-//    CGFloat newAngle = (self.pacmanXVelocity + self.pacmanYVelocity) * M_PI * 4;
-//    self.angle += newAngle * kUpdateInterval;
-//    
-//    CABasicAnimation *rotate;
-//    rotate                     = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-//    rotate.fromValue           = [NSNumber numberWithFloat:0];
-//    rotate.toValue             = [NSNumber numberWithFloat:self.angle];
-//    rotate.duration            = kUpdateInterval;
-//    rotate.repeatCount         = 1;
-//    rotate.removedOnCompletion = NO;
-//    rotate.fillMode            = kCAFillModeForwards;
-//    [self.pacman.layer addAnimation:rotate forKey:@"10"];
+    CGFloat newAngle = (self.pacmanXVelocity + self.pacmanYVelocity) * M_PI * 4;
+    self.angle += newAngle * kUpdateInterval;
+    
+    CABasicAnimation *rotate;
+    rotate                     = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotate.fromValue           = [NSNumber numberWithFloat:0];
+    rotate.toValue             = [NSNumber numberWithFloat:self.angle];
+    rotate.duration            = kUpdateInterval;
+    rotate.repeatCount         = 1;
+    rotate.removedOnCompletion = NO;
+    rotate.fillMode            = kCAFillModeForwards;
+    [self.pacman.layer addAnimation:rotate forKey:@"10"];
 }
 
 - (void)update {
