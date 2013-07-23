@@ -7,6 +7,7 @@
 //
 
 #import "GTLAppDelegate.h"
+#import "MazeViewController.h"
 
 @implementation GTLAppDelegate
 
@@ -14,6 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    MazeViewController *maze = [[MazeViewController alloc] init];
+    [[self window] setRootViewController:maze];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

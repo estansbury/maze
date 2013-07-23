@@ -25,6 +25,11 @@
 		487F01BD179DA3410022C550 /* ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 487F01B9179DA3410022C550 /* ghost.png */; };
 		487F01BE179DA3410022C550 /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = 487F01BA179DA3410022C550 /* exit.png */; };
 		487F01BF179DA3410022C550 /* pacman.png in Resources */ = {isa = PBXBuildFile; fileRef = 487F01BB179DA3410022C550 /* pacman.png */; };
+		487F01C2179DA6210022C550 /* gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 487F01C0179DA6210022C550 /* gift.png */; };
+		487F01C3179DA6210022C550 /* money.png in Resources */ = {isa = PBXBuildFile; fileRef = 487F01C1179DA6210022C550 /* money.png */; };
+		487F01C5179DA72B0022C550 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 487F01C4179DA72B0022C550 /* lock.png */; };
+		487F01C7179DA9040022C550 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487F01C6179DA9040022C550 /* CoreMotion.framework */; };
+		487F01C9179DA9160022C550 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487F01C8179DA9160022C550 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		487F01B9179DA3410022C550 /* ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ghost.png; sourceTree = "<group>"; };
 		487F01BA179DA3410022C550 /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
 		487F01BB179DA3410022C550 /* pacman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pacman.png; sourceTree = "<group>"; };
+		487F01C0179DA6210022C550 /* gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gift.png; sourceTree = "<group>"; };
+		487F01C1179DA6210022C550 /* money.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = money.png; sourceTree = "<group>"; };
+		487F01C4179DA72B0022C550 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		487F01C6179DA9040022C550 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		487F01C8179DA9160022C550 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487F01C9179DA9160022C550 /* QuartzCore.framework in Frameworks */,
+				487F01C7179DA9040022C550 /* CoreMotion.framework in Frameworks */,
 				487F0185179D9D880022C550 /* CoreGraphics.framework in Frameworks */,
 				487F0187179D9D880022C550 /* UIKit.framework in Frameworks */,
 				487F0183179D9D880022C550 /* Foundation.framework in Frameworks */,
@@ -109,6 +121,8 @@
 		487F0181179D9D880022C550 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				487F01C8179DA9160022C550 /* QuartzCore.framework */,
+				487F01C6179DA9040022C550 /* CoreMotion.framework */,
 				487F0182179D9D880022C550 /* Foundation.framework */,
 				487F0184179D9D880022C550 /* CoreGraphics.framework */,
 				487F0186179D9D880022C550 /* UIKit.framework */,
@@ -134,6 +148,9 @@
 		487F0189179D9D880022C550 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				487F01C4179DA72B0022C550 /* lock.png */,
+				487F01C0179DA6210022C550 /* gift.png */,
+				487F01C1179DA6210022C550 /* money.png */,
 				487F01B8179DA3410022C550 /* squareWall.png */,
 				487F01B9179DA3410022C550 /* ghost.png */,
 				487F01BA179DA3410022C550 /* exit.png */,
@@ -242,9 +259,12 @@
 			files = (
 				487F018D179D9D880022C550 /* InfoPlist.strings in Resources */,
 				487F01BD179DA3410022C550 /* ghost.png in Resources */,
+				487F01C3179DA6210022C550 /* money.png in Resources */,
 				487F01B7179DA2F20022C550 /* MazeViewController.xib in Resources */,
 				487F01BC179DA3410022C550 /* squareWall.png in Resources */,
 				487F01BF179DA3410022C550 /* pacman.png in Resources */,
+				487F01C5179DA72B0022C550 /* lock.png in Resources */,
+				487F01C2179DA6210022C550 /* gift.png in Resources */,
 				487F0195179D9D880022C550 /* Images.xcassets in Resources */,
 				487F01BE179DA3410022C550 /* exit.png in Resources */,
 			);
@@ -387,6 +407,7 @@
 				INFOPLIST_FILE = "Maze/Maze-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,6 +422,7 @@
 				INFOPLIST_FILE = "Maze/Maze-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
